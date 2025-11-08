@@ -37,7 +37,6 @@ export const DICT = {
         editList: 'Edit List',
         deleteList: 'Delete List',
         defaultListName: 'New List',
-        // New reminder texts
         reminders: 'Reminders',
         emailReminders: 'Email Reminders',
         smsReminders: 'SMS Reminders',
@@ -56,7 +55,8 @@ export const DICT = {
         testSent: 'Test message sent!',
         enterValidEmail: 'Please enter a valid email address',
         enterValidPhone: 'Please enter a valid phone number',
-        reminderDesc: 'Get notified about upcoming and overdue tasks'
+        reminderDesc: 'Get notified about upcoming and overdue tasks',
+        confirmDelete: 'Delete'
     },
     hr: {
         appTitle: 'Task Tracker',
@@ -93,7 +93,6 @@ export const DICT = {
         editList: 'Uredi Listu',
         deleteList: 'Izbriši Listu',
         defaultListName: 'Nova Lista',
-        // New reminder texts
         reminders: 'Podsjetnici',
         emailReminders: 'Email Podsjetnici',
         smsReminders: 'SMS Podsjetnici',
@@ -112,7 +111,8 @@ export const DICT = {
         testSent: 'Test poruka poslana!',
         enterValidEmail: 'Unesite valjanu email adresu',
         enterValidPhone: 'Unesite valjani broj telefona',
-        reminderDesc: 'Primajte obavijesti o nadolazećim i zakasnjelim zadacima'
+        reminderDesc: 'Primajte obavijesti o nadolazećim i zakasnjelim zadacima',
+        confirmDelete: 'Izbriši'
     }
 };
 
