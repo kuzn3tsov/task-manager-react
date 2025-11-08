@@ -24,6 +24,13 @@
   --gray-light: #888;
   --gray-lighter: #ccc;
   --white: #ffffff;
+  --vh: 1vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 body {
@@ -423,6 +430,11 @@ form label {
 .form-actions button {
   flex: 1;
   justify-content: center;
+}
+
+#activeTasks,
+#completedTasks {
+  overflow-y: visible;
 }
 
 /* Button Styles */
@@ -1133,18 +1145,38 @@ input:checked+.toggle-slider:before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  #root {
+    height: auto;
+    min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  body {
+    overflow: auto;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
   main {
+    overflow: visible;
     flex-direction: column;
+    min-height: calc(100vh - 80px);
   }
 
   aside {
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--border);
-    max-height: 300px;
+    max-height: 40vh;
+    /* Limit height on mobile */
     margin-right: 0;
     margin-bottom: 1rem;
     padding: 1rem;
+    overflow-y: auto;
+    /* Ensure scrolling */
+    flex-shrink: 0;
   }
 
   header {
@@ -1157,6 +1189,20 @@ input:checked+.toggle-slider:before {
 
   section {
     padding: 1rem;
+    overflow-y: visible;
+    min-height: 60vh;
+  }
+
+  .task-group {
+    margin-top: 1.5rem;
+    overflow-y: visible;
+    max-height: none;
+  }
+
+  #activeTasks,
+  #completedTasks {
+    overflow-y: visible;
+    max-height: none;
   }
 
   .task-item {
@@ -1212,6 +1258,35 @@ input:checked+.toggle-slider:before {
   .form-actions,
   .task-actions {
     margin-right: 0;
+  }
+
+  #lists {
+    overflow-y: auto;
+    max-height: 30vh;
+  }
+
+  #activeTasks,
+  #completedTasks {
+    overflow-y: visible;
+  }
+
+  form {
+    margin-right: 0;
+    overflow: visible;
+  }
+
+  .modal-content {
+    margin: 0.5rem;
+    padding: 1.5rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .task-item,
+  .reminder-modal,
+  .confirmation-modal {
+    height: auto;
+    min-height: auto;
   }
 }
 

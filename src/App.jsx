@@ -140,11 +140,11 @@ function App() {
       lists: prev.lists.map(list =>
         list.id === listId
           ? {
-              ...list,
-              tasks: list.tasks.map(task =>
-                task.id === taskId ? { ...task, completed } : task
-              )
-            }
+            ...list,
+            tasks: list.tasks.map(task =>
+              task.id === taskId ? { ...task, completed } : task
+            )
+          }
           : list
       )
     }));
@@ -214,7 +214,23 @@ function App() {
   const currentList = getList(state.activeListId);
   const activeTasks = currentList?.tasks.filter(t => !t.completed) || [];
   const completedTasks = currentList?.tasks.filter(t => t.completed) || [];
+  // Add mobile viewport fix
+  useEffect(() => {
+    // Fix for mobile viewport height
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
 
+    setVh();
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
+
+    return () => {
+      window.removeEventListener('resize', setVh);
+      window.removeEventListener('orientationchange', setVh);
+    };
+  }, []);
   return (
     <div className="App">
       <Header
