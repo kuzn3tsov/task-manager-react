@@ -2,11 +2,13 @@
   "name": "task-manager-react",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://kuzn3tsov.github.io/task-manager-react",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
