@@ -1,11 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/task-manager-react/', // Must match your repo name
+  base: '/task-manager-react/',
   build: {
     outDir: 'dist',
-    sourcemap: false
+    sourcemap: false,
+    emptyOutDir: true
+  },
+  server: {
+    port: 3000
   }
 })
