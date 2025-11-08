@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lem Treursić" />
+    <meta name="description"
+        content="Task Manager - A modern, responsive task management application with email and SMS reminders. Organize your work and life efficiently." />
+    <meta name="keywords"
+        content="task manager, todo list, task management, productivity, react app, reminders, email notifications, sms alerts" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Task Manager - Organize Your Work and Life" />
+    <meta property="og:description"
+        content="A modern React-based task management application with email and SMS reminder functionality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kuzn3tsov.github.io/task-manager-react" />
+    <meta property="og:image" content="https://kuzn3tsov.github.io/task-manager-react/task-manager-preview.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Task Manager - Organize Your Work and Life" />
+    <meta name="twitter:description" content="Modern task management with email and SMS reminders built in React." />
+    <meta name="twitter:image" content="https://kuzn3tsov.github.io/task-manager-react/task-manager-preview.png" />
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#3498db" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kuzn3tsov.github.io/task-manager-react" />
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <title>Task Manager - Organize Your Work and Life</title>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Task Manager",
+      "description": "A modern task management application with email and SMS reminders",
+      "url": "https://kuzn3tsov.github.io/task-manager-react",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web Browser",
+      "permissions": "browser-storage",
+      "author": {
+        "@type": "Person",
+        "name": "Lem Treursić"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- GitHub Pages SPA routing -->
+    <script type="text/javascript">
+        (function () {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+
+    <!-- Performance monitoring -->
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            if ('performance' in window) {
+                const perfData = window.performance.timing;
+                const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log('Task Manager loaded in:', loadTime + 'ms');
+            }
+        });
+    </script>
+
+    <!-- Error tracking -->
+    <script type="text/javascript">
+        window.addEventListener('error', function (e) {
+            console.error('Task Manager error:', e.error);
+        });
+    </script>
+
+    <!-- React App Script - Moved to head with defer -->
+    <script type="module" src="/src/main.jsx" defer></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- Loading fallback -->
+        <div
+            style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #f8f9fb; font-family: 'Segoe UI', Roboto, sans-serif;">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; color: #3498db; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-tasks"></i>
+                </div>
+                <h2 style="color: #2c80b4; margin-bottom: 0.5rem;">Task Manager</h2>
+                <p style="color: #666;">Loading your productivity tools...</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
