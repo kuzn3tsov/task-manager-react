@@ -40,61 +40,6 @@
     <link rel="icon" type="image/x-icon" href="/task-manager-react/favicon.ico" />
 
     <title>Task Manager - Organize Your Work and Life</title>
-
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Task Manager",
-      "description": "A modern task management application with email and SMS reminders",
-      "url": "https://kuzn3tsov.github.io/task-manager-react",
-      "applicationCategory": "ProductivityApplication",
-      "operatingSystem": "Web Browser",
-      "permissions": "browser-storage",
-      "author": {
-        "@type": "Person",
-        "name": "Lem Treursić"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-    <!-- GitHub Pages SPA routing -->
-    <script type="text/javascript">
-        (function () {
-            var redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect != location.href) {
-                history.replaceState(null, null, redirect);
-            }
-        })();
-    </script>
-
-    <!-- Performance monitoring -->
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            if ('performance' in window) {
-                const perfData = window.performance.timing;
-                const loadTime = perfData.loadEventEnd - perfData.navigationStart;
-                console.log('Task Manager loaded in:', loadTime + 'ms');
-            }
-        });
-    </script>
-
-    <!-- Error tracking -->
-    <script type="text/javascript">
-        window.addEventListener('error', function (e) {
-            console.error('Task Manager error:', e.error);
-        });
-    </script>
-
-    <!-- React App Script - NOW IN HEAD with defer -->
-    <script type="module" src="/task-manager-react/src/main.jsx"></script>
 </head>
 
 <body>
@@ -111,6 +56,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Vite will automatically inject the correct script during build -->
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
